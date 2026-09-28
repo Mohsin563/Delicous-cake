@@ -1,0 +1,69 @@
+:root{--bg:#FDF3E7;--card:#FFFFFF;--ink:#3A2A22;--muted:#7a6558;--acc:#C99A66;--accd:#8a5a2b;--line:#ecd9c3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#21160f;--card:#2d1f16;--ink:#f6e8d8;--muted:#cdb39b;--accd:#e0b283;--line:#4a3628}}
+:root[data-theme="dark"]{--bg:#21160f;--card:#2d1f16;--ink:#f6e8d8;--muted:#cdb39b;--accd:#e0b283;--line:#4a3628}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;line-height:1.6}
+h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1;margin:0}
+a{color:inherit}:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:58px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none}
+.logo i{width:26px;height:26px;border-radius:50%;background:var(--acc);display:block}
+nav{display:flex;gap:22px;align-items:center;font-size:.92rem}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.lang{background:none;border:1.5px solid var(--acc);color:var(--accd);border-radius:999px;padding:3px 12px;font:inherit;font-weight:700;cursor:pointer}
+.btn{display:inline-block;background:var(--acc);color:#2a1a0f;padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:700;border:0;font-family:inherit;font-size:1rem;cursor:pointer}
+.btn.alt{background:rgba(255,255,255,.75);color:#3A2A22}
+.hero{position:relative;min-height:440px;display:flex;align-items:center;overflow:hidden;color:#2a1a0f}
+.hero::before{content:"";position:absolute;inset:-20px;background:url(images/cake-slices.jpg) center/cover;filter:blur(6px) saturate(1.1);transform:scale(1.1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,243,231,.92) 0%,rgba(253,243,231,.55) 55%,rgba(253,243,231,.15) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-top:60px;padding-bottom:60px}
+.hero small{display:block;font-weight:700;letter-spacing:.06em;font-size:.8rem;margin-bottom:14px;color:#6b4620}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);max-width:12ch}
+.hero .tag{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.4rem;margin:14px 0 24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:80px 0}
+.center{text-align:center}
+h2{font-size:clamp(2rem,4.5vw,2.9rem)}
+.rule{width:56px;height:3px;background:var(--acc);margin:14px 0 20px;border-radius:2px}
+.center .rule{margin-left:auto;margin-right:auto}
+.sub{color:var(--muted);max-width:52ch;margin:0}.center .sub{margin:0 auto}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.chips span{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.92rem;display:flex;align-items:center;gap:10px}
+.chips span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc);flex:none}
+.maker{position:relative}
+.maker img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;display:block}
+.maker figcaption{position:absolute;right:-10px;bottom:-22px;background:var(--card);border-radius:14px;padding:14px 18px;max-width:230px;box-shadow:0 10px 30px rgba(58,42,34,.18);font-size:.9rem}
+.maker figcaption b{display:block;font-size:.72rem;letter-spacing:.06em;color:var(--accd);margin-bottom:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:44px;text-align:left}
+.card{background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 6px 24px rgba(58,42,34,.1)}
+.card img{width:100%;height:210px;object-fit:cover;display:block}
+.card div{padding:20px 22px 24px}
+.card h3{font-size:1.5rem;margin-bottom:6px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:.95rem}
+.card a{color:var(--accd);font-weight:700;font-size:.9rem;text-decoration:none}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:40px}
+.gal img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;display:block}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:44px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 24px 26px;position:relative}
+.step b{position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:32px;height:32px;border-radius:50%;background:var(--acc);color:#2a1a0f;display:grid;place-items:center}
+.step h3{font-size:1.3rem;margin-bottom:8px}.step p{margin:0;color:var(--muted);font-size:.95rem}
+.connect{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.info{margin-top:26px;display:grid;gap:18px}
+.info small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;color:var(--muted)}
+.info a{color:var(--accd)}
+form{background:var(--card);border-radius:20px;padding:28px;box-shadow:0 10px 32px rgba(58,42,34,.14);display:grid;gap:14px}
+form h3{font-size:1.5rem}
+label{display:grid;gap:6px;font-size:.85rem;font-weight:700}
+input,textarea{font:inherit;font-weight:400;padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+form p{margin:0;font-size:.85rem;color:var(--muted)}
+.quote{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}
+.quote p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.6rem,4vw,2.3rem);margin:0}
+footer{padding:36px 0;font-size:.92rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media (max-width:760px){nav a{display:none}.about,.connect{grid-template-columns:1fr}.maker figcaption{right:8px}section{padding:60px 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
